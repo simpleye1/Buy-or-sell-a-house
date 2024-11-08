@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- 房屋总价输入 -->
+        <TextView
+            android:text="请输入房屋总价（万元）"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp" />
+        <EditText
+            android:id="@+id/etHousePrice"
+            android:text="150"
+            android:hint=""
+            android:inputType="numberDecimal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <!-- 首付比例 -->
+        <TextView
+            android:text="请输入首付比例（如0.2表示20%）"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp" />
+        <EditText
+            android:id="@+id/etInitRate"
+            android:text="0.2"
+            android:hint=""
+            android:inputType="numberDecimal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp" />
+
+        <!-- 契税率输入 -->
+        <TextView
+            android:text="请输入契税率（如0.01表示1%）"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp" />
+        <EditText
+            android:id="@+id/etDeedTaxRate"
+            android:text="0.015"
+            android:hint=""
+            android:inputType="numberDecimal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp" />
+
+        <!-- 个人所得税率输入 -->
+        <TextView
+            android:text="请输入个人所得税率（如0.01表示1%）"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp" />
+        <EditText
+            android:id="@+id/etIncomeTaxRate"
+            android:text="0.01"
+            android:hint=""
+            android:inputType="numberDecimal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp" />
+
+        <!-- 买方中介费率输入 -->
+        <TextView
+            android:text="请输入买方中介费率（如0.01表示1%）"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp" />
+        <EditText
+            android:id="@+id/etBuyerAgentFeeRate"
+            android:text="0.01"
+            android:hint=""
+            android:inputType="numberDecimal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp" />
+
+        <!-- 卖方中介费率输入 -->
+        <TextView
+            android:text="请输入卖方中介费率（如0.005表示0.5%）"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp" />
+        <EditText
+            android:id="@+id/etSellerAgentFeeRate"
+            android:text="0.0175"
+            android:hint=""
+            android:inputType="numberDecimal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp" />
+
+        <!-- 契税承担方选择 -->
+        <TextView
+            android:text="契税由谁承担？"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp" />
+
+        <RadioGroup
+            android:id="@+id/rgDeedTaxBearer"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <RadioButton
+                android:id="@+id/rbDeedTaxBuyer"
+                android:text="买方"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <RadioButton
+                android:id="@+id/rbDeedTaxSeller"
+                android:text="卖方"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RadioGroup>
+
+        <!-- 个人所得税承担方选择 -->
+        <TextView
+            android:text="个人所得税由谁承担？"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp" />
+
+        <RadioGroup
+            android:id="@+id/rgIncomeTaxBearer"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <RadioButton
+                android:id="@+id/rbIncomeTaxBuyer"
+                android:text="买方"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <RadioButton
+                android:id="@+id/rbIncomeTaxSeller"
+                android:text="卖方"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RadioGroup>
+
+        <!-- 买方中介费承担方选择 -->
+        <TextView
+            android:text="买方中介费由谁承担？"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp" />
+
+        <RadioGroup
+            android:id="@+id/rgBuyerAgentFeeBearer"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <RadioButton
+                android:id="@+id/rbBuyerAgentFeeBuyer"
+                android:text="买方"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <RadioButton
+                android:id="@+id/rbBuyerAgentFeeSeller"
+                android:text="卖方"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RadioGroup>
+
+        <!-- 卖方中介费承担方选择 -->
+        <TextView
+            android:text="卖方中介费由谁承担？"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp" />
+
+        <RadioGroup
+            android:id="@+id/rgSellerAgentFeeBearer"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <RadioButton
+                android:id="@+id/rbSellerAgentFeeBuyer"
+                android:text="买方"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <RadioButton
+                android:id="@+id/rbSellerAgentFeeSeller"
+                android:text="卖方"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RadioGroup>
+
+        <!-- 计算按钮 -->
+        <Button
+            android:id="@+id/btnCalculate"
+            android:text="计算"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp" />
+
+        <!-- 结果显示 -->
+        <TextView
+            android:id="@+id/tvResult"
+            android:text=""
+            android:textSize="16sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp" />
+    </LinearLayout>
+</ScrollView>
